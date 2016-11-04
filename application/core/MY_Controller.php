@@ -35,8 +35,14 @@ class Application extends CI_Controller
 		$this->data['navbar'] = $this->parser->parse('navbar', $this->data, true);
 		
 	    // use layout content if provided
-	    if (!isset($this->data['content']))
+	    if (!isset($this->data['content'])) {
 	        $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
+        }
+            
+        // integrate any needed CSS framework & components
+        $this->data['caboose_styles'] = $this->caboose->styles();
+        $this->data['caboose_scripts'] = $this->caboose->scripts();
+        $this->data['caboose_trailings'] = $this->caboose->trailings();
 
 	    $this->parser->parse($template, $this->data);
 	}

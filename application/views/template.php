@@ -10,7 +10,8 @@
     </head>
     
     <body>
-        <div id="container">
+        <div class="container">
+        
         	{navbar}
             {content}
             

@@ -10,7 +10,7 @@
     </head>
     
     <body>
-        <div id="container">
+        <div class="container">
             {navbar}
             <div class="jumbotron">
                 <h1>We're hiring</h1>
